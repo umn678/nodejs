@@ -5,7 +5,7 @@ const path = require('path');
 const app = express();
 
 // Google Search Console doğrulama dosyası
-app.get('/google123456.html', (req, res) => {
+app.get('/google0e31c5c7650e76aa.html', (req, res) => {
   res.sendFile(path.join(__dirname, 'google0e31c5c7650e76aa.html'));
 });
 
