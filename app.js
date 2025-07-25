@@ -3,10 +3,13 @@ const { createProxyMiddleware } = require('http-proxy-middleware');
 
 const app = express();
 
-app.use('/', createProxyMiddleware({
-    target: 'https://mynet.com', // Proxy yapmak istediğin site
-    changeOrigin: true,
-    secure: false,
+app.use('/tumutoptan', createProxyMiddleware({
+  target: 'https://thebravecartel.co.za',
+  changeOrigin: true,
+  secure: false,
+  pathRewrite: {
+    '^/tumutoptan': '',
+  },
 }));
 
 app.listen(process.env.PORT || 3000);
