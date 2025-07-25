@@ -4,7 +4,7 @@ const { createProxyMiddleware } = require('http-proxy-middleware');
 const app = express();
 
 app.use('/', createProxyMiddleware({
-    target: 'https://hedefsite.com', // Proxy yapmak istediğin site
+    target: 'https://mynet.com', // Proxy yapmak istediğin site
     changeOrigin: true,
     secure: false,
 }));
